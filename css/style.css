@@ -1,0 +1,333 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+h1 {
+    font-size: 8vw;
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+h4 {
+    font-size: 2vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+* === HEADER SECTION ===
+*/
+
+header {
+    background-color: #0d0d0d;
+    height: 30px;
+    overflow: hidden;
+    font-size: 0.9em;
+    width: auto;
+}
+
+header nav {
+    display: inline-block;
+}
+
+header nav ul li {
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    margin: 0 5px; 
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #a6a6a6;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+#left-header-nav {
+    float: left;
+    margin-left: 10px;
+}
+
+#right-header-nav {
+    float: right;
+    margin-right: 10px;
+}
+
+/*
+* === JUMBOTRON SECTION ===
+*/
+
+#jumbotron-articles {
+    margin: 50px 0 auto;
+    background-color: #d9d9d9;
+    overflow: hidden;
+    height: 60vh;
+    max-height: 560px;
+}
+
+#jumbotron-main-div {
+    width: 66.6666%;
+    height: 100%;
+    float: left;
+    position: relative;
+    padding: 8px;
+}
+
+#jumbotron-main {
+    background: url(../images/odin_jumbo.jpg) no-repeat center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#jumbotron-main h1 a {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+
+#jumbotron-main h2 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+
+#jumbotron-image-cover {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #cc0000;
+    background: -webkit-linear-gradient(left top, black, red);
+    z-index: 99;
+    opacity: 0.9;
+    transition: opacity .5s ease;
+}
+
+#jumbotron-image-cover:hover {
+    opacity: 0.8;
+}
+
+#jumbotron-right {
+    float: left;
+    width: 33.3333%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#jumbotron-right-top-div {
+    padding: 8px 8px 8px 0;
+    height: 50%;
+}
+
+#jumbotron-right-bottom-div {
+    padding: 0 8px 8px 0;
+    height: 50%;
+}
+
+#jumbotron-right-top {
+    background: url(../images/gnomes_plan.png) no-repeat center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#jumbotron-right-bottom {
+    background: url(../images/dogs.jpg) no-repeat center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+* === LATEST NEWS ===
+*/
+
+.latest-news {
+    margin: auto;
+    max-width: 1020px;
+    overflow: hidden;
+}
+
+.latest-news ul {
+    text-align: center;
+}
+
+.latest-news ul li {
+    display: inline-block;
+    width: 12vw;
+    min-width: 180px;
+    position: relative;
+    vertical-align: top;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.latest-news ul li img {
+    width: 100%;
+    height: 50%;
+}
+
+.latest-news ul li p {
+    font-weight: 800;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.latest-news h4 {
+    margin: 15px;
+}
+
+.latest-news h4 a {
+    color: #F42;
+}
+
+/*
+* === FOOTER SECTION ===
+*/
+
+footer {
+    background-color: #0d0d0d;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+footer section {
+    vertical-align: top;
+}
+
+footer section h6 {
+    margin: 20px 0;
+}
+
+h6 a {
+    text-transform: uppercase;
+    color: #a6a6a6;
+}
+
+#footer-main-nav {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footer-main-menu {
+    display: inline-block;
+    width: 33.333%;
+    min-width: 200px;
+}
+
+.footer-main-menu ul li {
+    font-size: 16px;
+    color: white;
+    margin: 8px 0;
+}
+
+/*
+* === CLEAR SECTION ===
+*/
+
+
+.clear {
+    clear: both;
+}
+
+@media (max-width: 1023px)
+{
+    #jumbotron-articles {
+        height: 50vh;
+    }
+    
+    #jumbotron-image-cover {
+        display: none;
+    }
+    
+    h1, h2 {
+        color: black;
+    }
+}
+
+@media (max-width: 800px)
+{
+    #jumbotron-main-div, #jumbotron-right {
+        float: none;
+        display: block;
+        width: auto;
+        height: auto;
+    }
+    
+    #jumbotron-articles {
+        height: auto;
+        max-height: auto;
+    }
+    
+    h1 {
+        display:none;
+    }
+    
+    #jumbotron-main, #jumbotron-right-bottom-div, #jumbotron-right-top-div {
+        height: 30vh;
+        min-height: 30vh;
+    }
+    
+    .latest-news ul li {
+        display: block;
+        width: auto;
+        clear: left;
+    }
+    
+    .latest-news ul li img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin: 10px;
+    }
+    
+    .latest-news ul li p {
+        padding: 10px;
+    }
+    
+    #footer-main-nav {
+        display: block;
+    }
+    
+    header {
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
